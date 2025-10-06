@@ -1,0 +1,82 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #e6ffe6;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header img {
+    border: 3px solid #ff7f50;
+    margin: 10px;
+    width: 120px;
+    height: 120px;
+}
+
+main {
+    max-width: 700px;
+    margin: 25px auto;
+    padding: 0;
+    background-color: transparent;
+}
+
+main section:not(.three-column-layout) {
+    padding: 0 20px;
+}
+
+h2, h3 {
+    color: #008080;
+    margin-top: 20px;
+}
+
+.three-column-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px; 
+    margin-top: 30px;
+    padding: 20px 10px 30px;
+    background-color: #ff7f50;
+    color: white;
+}
+
+.three-column-layout section {
+    margin-bottom: 0;
+}
+
+.three-column-layout h3 {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.details {
+    color: white;
+    padding: 10px 20px;
+    background-color: #ff7f50;
+    margin: 15px 0;
+}
+
+.hobbies ul, .projects ol {
+    padding-left: 20px; 
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+footer {
+    background-color: #ff7f50;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    font-size: 0.8em;
+    margin-top: 20px;
+}
