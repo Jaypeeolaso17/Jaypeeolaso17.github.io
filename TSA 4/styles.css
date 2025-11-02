@@ -1,0 +1,43 @@
+/* General Layout */
+body { 
+    /* Font reverted to a standard, universally available sans-serif font */
+    font-family: Arial, Helvetica, sans-serif; 
+    margin: 20px; 
+    background-color: #f4f4f4; 
+}
+
+/* Title Color Change */
+h2 {
+    color: red; /* Title color is retained as red */
+}
+
+/* Rest of the styling remains the same */
+.container { max-width: 600px; margin: auto; padding: 20px; background: white; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.form-group { margin-bottom: 10px; }
+label { display: block; margin-bottom: 3px; font-weight: bold; }
+input[type="text"], input[type="date"], select { width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 3px; }
+
+/* User Interactivity: Button color change on hover */
+#save-button { 
+    background-color: #007bff; 
+    color: white; 
+    padding: 10px 15px; 
+    border: none; 
+    cursor: pointer; 
+    border-radius: 3px;
+    transition: background-color 0.2s; 
+}
+#save-button:hover { 
+    background-color: #0056b3; 
+} 
+
+/* Table Styling */
+#student-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+#student-table th, #student-table td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+#student-table th { background-color: #e9ecef; }
+
+/* User Interactivity: Table row color change on hover */
+#student-table tr:hover { 
+    background-color: #ffe0b2; 
+    cursor: pointer; 
+} 
