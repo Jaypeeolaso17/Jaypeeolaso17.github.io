@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&family=Lato:wght@300;400;700&family=Poppins:wght@400;700&display=swap');
+
+:root {
+  --font-brand: 'Prata', serif;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Lato', sans-serif;
+
+  --color-light: #e5e2da;
+  --color-medium: #b0a99f;
+  --color-bg: #f9f5f2;
+  --text-dark: #1a1a1a;
+  --text-muted: #555;
+
+  --form-width: 400px;
+  --border-radius: 24px;
+  --title-height: 92px;
+  --footer-height: 100px;
+}
+
+/* =========================
+   GLOBAL LAYOUT
+========================= */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: var(--font-body);
+  background-color: var(--color-light);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Full-width Title (Login & Signup identical) */
+.form-title-container {
+  width: 100%;
+  height: var(--title-height);
+  background-color: var(--color-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-top: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  flex-shrink: 0;
+}
+
+.form-title {
+  font-family: var(--font-brand);
+  font-size: 38px;
+  letter-spacing: 3px;
+  color: var(--text-dark);
+  margin: 0;
+  font-weight: 400; /* Not bold */
+}
+
+/* Page content container */
+.page-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Form subtitle */
+.form-subtitle {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  color: var(--color-medium);
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Auth form */
+.auth-form-container {
+  background-color: var(--color-bg);
+  padding: 30px 40px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: var(--form-width);
+  border: 1px solid rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 400;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid #dcd6cf;
+  background-color: transparent;
+  font-size: 1rem;
+  color: var(--text-dark);
+  font-family: var(--font-body);
+  transition: border-bottom-color 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-bottom-color: var(--color-medium);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: var(--border-radius);
+  border: none;
+  background-color: var(--color-medium);
+  color: white;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #928a80;
+}
+
+.form-link-text {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-top: 10px;
+  text-align: center;
+}
+
+.form-link-text a {
+  color: var(--color-medium);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.form-link-text a:hover {
+  color: var(--text-dark);
+  text-decoration: underline;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #b0a99f;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  font-size: 16px;
+}
+
+.footer-logo {
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #dcd6cf;
+  margin: 20px 0;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-icons a {
+  margin: 0 5px;
+}
+
+.footer-icons {
+  display: flex;
+  align-items: center;
+}
+
+/* =========================
+   MOBILE RESPONSIVE STYLES
+========================= */
+@media (max-width: 768px) {
+  .page-content {
+    padding: 15px;
+  }
+
+  .auth-form-container {
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 16px;
+  }
+
+  .form-subtitle {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  .submit-btn {
+    padding: 10px 16px;
+    font-size: 0.95rem;
+  }
+
+  .form-link-text {
+    font-size: 13px;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin-bottom: 10px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-left {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .footer-icons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-title {
+    font-size: 32px;
+    letter-spacing: 2px;
+  }
+
+  .form-subtitle {
+    font-size: 20px;
+  }
+
+  .auth-form-container {
+    padding: 15px;
+    border-radius: 12px;
+  }
+
+  .submit-btn {
+    font-size: 0.9rem;
+  }
+
+  .footer-nav a {
+    font-size: 14px;
+  }
+}
